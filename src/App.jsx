@@ -1,33 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Typewriter from './components/Typewriter';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div id="inputContainer">
+        <h3>Text Inputs</h3>
+        <label htmlFor="text1">First text</label><br />
+        <input type="text" id='text1' /><br />
+        <label htmlFor="text2">Second Text</label><br />
+        <input type="text" id='text2' /><br />
+        <label htmlFor="text3">Third Text</label><br />
+        <input type="text" id='text3' /><br />
+        <h3>Controls</h3>
+        <label htmlFor="speed">Speed:</label>
+        <input type="number" id='speed' max={1500} min={100} />
+
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Typewriter />
     </>
   )
 }
